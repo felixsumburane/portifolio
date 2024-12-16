@@ -1,8 +1,8 @@
 * {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: Poppins;
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
@@ -14,7 +14,6 @@
     --main-color: #13bbff;
     --other-color: #c3cad5;
     --bg-color: #1d1f24;
-
     --h1-font: 4.5rem;
     --h2-font: 2.9rem;
     --p-font: 1rem;
@@ -23,43 +22,38 @@
 body {
     color: var(--text-color);
     background-color: var(--second-bg-color);
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
     position: fixed;
     width: 100%;
-    top: 0px;
-    right: 0px;
-    align-items: center;
-    display: flex;
-    background-color: white;
-    justify-content: space-between;
-    padding: 40px 16%;
-    transition: all .5s ease;
+    top: 0;
+    left: 0;
     background-color: var(--second-bg-color);
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
 }
 
 .logo {
     font-size: 36px;
     color: var(--text-color);
     font-weight: 600;
-}
-
-span {
-    color: var(--main-color);
+    font-family: 'Montserrat', sans-serif;
 }
 
 .navlist {
     display: flex;
-    gap: 40px;
+    gap: 30px;
 }
 
 .navlist a {
     font-size: var(--p-font);
-    font-weight: 500;
     color: var(--other-color);
     transition: all 0.5s ease;
-
 }
 
 .navlist a:hover {
@@ -67,101 +61,350 @@ span {
     text-shadow: 3px 3px 20px var(--main-color), -2px 1px 30px var(--text-color);
 }
 
-.h-btn {
-    display: inline-block;
-    padding: 11px 16px;
+.top-btn .h-btn {
     background-color: transparent;
-    border: solid 2px var(--main-color);
-    border-radius: 2px;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 600px;
+    border: 2px solid var(--main-color);
     color: var(--main-color);
-    transition: all .5s ease;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
-.h-btn:hover {
+.top-btn .h-btn:hover {
     background-color: var(--main-color);
     color: var(--bg-color);
-    box-shadow: 0 0 20px var(--main-color);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 section {
-    padding: 110px 16% 90px;
+    padding: 80px 10%;
 }
 
 .hero {
     height: 100vh;
-    width: 100%;
     background-image: url(../imagens/background.png);
-    background-position: top right;
     background-size: cover;
-
+    background-position: center;
     display: flex;
-    align-items: center;
     justify-content: flex-start;
+    align-items: center;
 }
 
-.main-content h4 {
-    font-size: 1.6rem;
-    font-weight: 900;
-    margin: 20px 0px 20px;
-    line-height: 1.2;
+.main-content h1 {
+    font-size: 3.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 
 .main-content p {
-    font-size: var(--p-font);
-    font-weight: 400;
-    width: 620px;
-    max-width: 100%;
+    font-size: 1.2rem;
     color: var(--other-color);
-    line-height: 30px;
-    margin-bottom: 15px;
-}
-
-.social {
-    margin-bottom: 10px;
+    max-width: 600px;
+    margin-bottom: 20px;
 }
 
 .social img {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 25px;
-    width: 25px;
-    color: var(--main-color);
-    border-radius: 50%;
-    backdrop-filter: brightness(88%);
-    font-size: 20px;
-    margin-right: 7px;
-    box-shadow: 0 0 20px transparent;
-    cursor: pointer;
-    transition: all 0.5s ease;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
 }
 
 .social img:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px var(--main-color);
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 28px;
-    background-color: var(--main-color);
-    border-radius: 4px;
-    color: var(--text-color);
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    font-weight: 600px;
-    transition: all 0.5s ease;
+.services .service-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
 }
-.btn:hover{
-    background-color: transparent;
+
+.services .card {
+    background-color: var(--second-bg-color);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.services .card:hover {
+    transform: translateY(-10px);
+}
+
+.services .card i {
+    font-size: 3rem;
     color: var(--main-color);
-    box-shadow: 0 0 20px var(--main-color);
+    margin-bottom: 15px;
 }
 
-.btn2{
-    margin-left: 20px;
+.services .card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.services .card p {
+    color: var(--other-color);
+}
+
+.portfolio {
+    padding: 40px 0;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
+.carousel-item {
+    width: 300px;
+    text-align: center;
+    background-color: var(--second-bg-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item:hover img {
+    transform: scale(1.1);
+}
+
+.contact {
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+    padding: 80px 10%;
+    text-align: center;
+}
+
+/* Estilos para a seção Sobre Mim */
+.sobre-mim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #f4f4f9;
+}
+
+/* Contêiner da seção, que mantém o conteúdo centralizado */
+.sobre-mim-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Estilo para a imagem de perfil */
+.sobre-mim-foto {
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.foto-perfil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo para o texto */
+.sobre-mim-texto {
+    max-width: 600px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.sobre-mim-texto h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #0077b6;
+}
+
+.sobre-mim-texto p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Estilos para a seção de Contato */
+.contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f4f4f9;
+}
+
+.contato-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilos para o título */
+.contato-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #0077b6;
+    font-weight: 600;
+}
+
+/* Estilo para os campos do formulário */
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #0077b6;
+    outline: none;
+}
+
+/* Estilo para o botão de envio */
+.btn-contato {
+    padding: 12px;
+    background-color: #0077b6;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contato:hover {
+    background-color: #005f8a;
+}
+
+/* Media Queries para Responsividade */
+
+@media (max-width: 1200px) {
+    .navlist {
+        gap: 20px;
+    }
+
+    .services .service-cards {
+        flex-direction: column;
+    }
+
+    .services .card {
+        width: 100%;
+    }
+
+    .sobre-mim-container {
+        flex-direction: column;
+    }
+
+    .sobre-mim-foto {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 5%;
+    }
+
+    .hero {
+        height: 80vh;
+    }
+
+    .main-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-content p {
+        font-size: 1rem;
+    }
+
+    .contato-container {
+        padding: 20px;
+    }
+
+    .form-contato {
+        gap: 10px;
+    }
+
+    .social img {
+        margin-right: 10px;
+    }
+
+    .carousel-item {
+        width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navlist {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navlist a {
+        font-size: 0.9rem;
+    }
+
+    .main-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+    .services .card {
+        width: 100%;
+    }
+
+    .carousel-item {
+        width: 200px;
+    }
 }
